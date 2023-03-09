@@ -7,7 +7,7 @@ public class myApp{
    
   //user prompts 
   System.out.println("Can you name the main characters from seinfeld?"); 
-  System.out.println("Enter the names seperated by commas"); 
+  System.out.println("Enter the names with the first letter UPPERCASE and the names seperated by commas"); 
   
   //declares the scanner to be used for input 
   Scanner s = new Scanner(System.in); 
