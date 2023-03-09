@@ -42,7 +42,7 @@ public class myApp{
 
 
  //compares the 2 lists of names
-  if(sArrayList.equals(uArrayList)) { 
+  if(sArrayList.containsAll(uArrayList)) { 
    System.out.println("great success"); 
   }else { 
    System.out.println("ERROR I NEED SCISSORS 61"); 
