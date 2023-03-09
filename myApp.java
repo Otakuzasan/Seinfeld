@@ -8,9 +8,10 @@ public class myApp{
   //user prompts 
   System.out.println("Can you name the main characters from seinfeld?"); 
   System.out.println("Enter the names seperated by commas"); 
+  
   //declares the scanner to be used for input 
   Scanner s = new Scanner(System.in); 
-   
+  
   //string of names 
   String seinfeld = "Jerry, Elaine, Kramer, George"; 
    
@@ -24,15 +25,8 @@ public class myApp{
   //creates the list as an array 
   ArrayList<String> sArrayList = new ArrayList<String>(seinfeldList); 
    
-   
-   
-   
-   
   ////////////////////////         base list ^ and then user list below  
-   
-   
-   
-   
+
   //assigns input to the next Line 
   String userInput = s.nextLine(); 
    
@@ -45,32 +39,15 @@ public class myApp{
    
   //creates the array of the list 
   ArrayList<String>uArrayList = new ArrayList<String>(userList); 
-   
- 
- 
+
+
+ //compares the 2 lists of names
   if(sArrayList.equals(uArrayList)) { 
    System.out.println("great success"); 
   }else { 
    System.out.println("ERROR I NEED SCISSORS 61"); 
   } 
-   
-   
-   
-   
-   
-  /* 
-  ArrayList<String>userList = new ArrayList<String>(); 
-   
-   
-  userList.add(userInput); 
-  
  
-  System.out.println(userList); 
-   
-  */ 
-   
-   
-   
   s.close(); 
  } 
 }
