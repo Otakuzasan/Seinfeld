@@ -1,35 +1,59 @@
 package myApp;
 import java.util.*;
 public class Start{
+	//program that asks the user to input the 4 main characters of SEINFELD
+	//with the FIRST letter of each name capitalized and each name 
+	//separated by commas. no spaces
+	
+	
 	public static void main(String[] args)
 	{
-		System.out.println("Can you name the main characters from seinfeld?");
-		System.out.println("Enter the names seperated by spaces");
-		Scanner uText = new Scanner(System.in);
-		//creates the array of names
-		
-		
-		String [] seinfeld = {"Jerry", "Elaine", "Kramer", "George"};
-		
-		//Allows the user input
-		String check = uText.next(); 
-		// call for the user input 
-		if (check.equalsIgnoreCase(seinfeld[2])) {
-			System.out.println("CODE ACCEPTED ^_^  BE WELL");
-		}else if(check.equalsIgnoreCase(seinfeld[0])){
-			System.out.print("CODE ACCEPTED ^_^  BE WELL");
-		}else if(check.equalsIgnoreCase(seinfeld[1])) {
-			System.out.print("CODE ACCEPTED ^_^  BE WELL");
+		 do {
+			  //User Instructions
+			  System.out.println("Can You Name The 4 Main Characters Of Seinfeld");
+			  System.out.println("With The First Letter Of Each Name Capitalized");
+			  System.out.println("And Each Name Seperated By Commas, NO SPACES");
+			  
+		  //declares scanner for input
+		  Scanner s = new Scanner(System.in);
+		  //sets uInput to the nextLine
+			String userInput = s.nextLine();
 
-		}else if(check.equalsIgnoreCase(seinfeld[3])) {
-			System.out.print("CODE ACCEPTED ^_^  BE WELL");
+		  //create arraylist for seinfeld characters
+		  ArrayList<String>seinfeld = new ArrayList<>();
+		  //add characters to that list
+		  seinfeld.add("Jerry");
+		  seinfeld.add("Elaine");
+		  seinfeld.add("George");
+		  seinfeld.add("Kramer");
+			//creates an array with items split by the comma
+			String[] useSplit =userInput.split(",");
+			
+			
+			//creates the list of user input
+			List<String> userList = Arrays.asList(useSplit);
+			//creates the user input array
+			ArrayList<String>uArrayList = new ArrayList<String>(userList);
+			
 
-		}else {
-			System.out.print("error i need scissors 61");
+			
+			// statement to compare the 2 arrayLists
+			if(uArrayList.containsAll(seinfeld)) {
+				System.out.println("great success");
+			}else {
+				System.out.println("ERROR I NEED SCISSORS 61");
+			}
+
+		  
+		
+		  
+		  
+		  //ends loop
+		  }while(true);
 
 		}
-		uText.close();		
-		}					
+	  
 
-}
+		
+	}
 	
